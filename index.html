@@ -4,136 +4,125 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MUB TECH</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css">
+    <title>Wedding Salon</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome Link -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap">
+    <!-- Bootstrap Css Link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css">
+    <!-- Web Icon -->
+    <link rel="icon" href="Assets/Web Logo.webp">
 </head>
 
 <body>
 
-    <!-- Header | Navigation -->
-
+    <!-- Header Section Start-->
     <header>
-        <nav class="navbar">
-            <div class="logo">MUB TECH</div>
-            <ul class="nav-links">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Portfolio</a></li>
-                <li><a href="#">Team</a></li>
-                <li><a href="#">Pricing</a></li>
-                <li><a href="#">Blog</a></li>
-                <li class="dropdown">
-                    <a href="#">Dropdown ▾</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">Option 1</a></li>
-                        <li><a href="#">Option 2</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-            <a class="btn" href="#">Get Started</a>
-        </nav>
-    </header>
-
-    <!-- Hero Section | Image -->
-
-    <section class="hero">
-        <div class="hero-text">
-            <h1>Better Solutions For Your Business</h1>
-            <p>We are team of talented designers making websites with Bootstrap</p>
-            <div class="hero-buttons">
-                <a href="#" class="btn primary">Get Started</a>
+        <div class="container">
+            <div class="logo">
+                Wedding Salon
             </div>
-        </div>
-        <div class="hero-image">
-            <img src="Assets/Images/hero-img.png" alt="Hero Illustration" />
-        </div>
-    </section>
-
-    <!-- About Section -->
-
-    <section class="about" id="about">
-        <h2 class="section-title">ABOUT US</h2>
-        <div class="about-content">
-            <div class="about-left">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua.</p>
+            <div class="menu-toggle" id="menu-toggle">
+                &#9776;
+            </div>
+            <nav class="nav" id="nav">
+                <div class="close-toggle" id="close-toggle">
+                    &times;
+                </div>
                 <ul>
-                    <li><i class="fa-regular fa-hand-point-right"></i> Ullamco laboris nisi ut aliquip ex ea commodo
-                        consequat.</li>
-                    <li><i class="fa-regular fa-hand-point-right"></i> Duis aute irure dolor in reprehenderit in
-                        voluptate velit.</li>
-                    <li><i class="fa-regular fa-hand-point-right"></i> Ullamco laboris nisi ut aliquip ex ea commodo
-                    </li>
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contact</a></li>
                 </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- Header Section End -->
+
+    <!-- Carousel Section -->
+    <div class="slider">
+        <div class="slides">
+            <img src="Assets/slider-1.jpg" class="slide active">
+            <img src="Assets/slider-2.jpg" class="slide">
+            <img src="Assets/slider-3.jpg" class="slide">
+        </div>
+        <div class="dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </div>
+    <!-- Carousel Section End -->
+
+    <!--User Welcome Start-->
+    <section class="welcome-section">
+        <h2>Welcome</h2>
+        <p>
+            Autem vel eum iriure dolor in hendrerit in volesite consequat, vel illum dolore eu feugiat nulla facilisis
+            at
+            vero delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option
+            congue
+            e nihil imperdiet doming id quod mazim placerat fac
+        </p>
+
+        <div class="welcome-gallery">
+            <div class="card c1"><img src="Assets/img1.jpg" alt="">
+                <div class="overlay">MIRUM EST<br><span>Claritas est etiam</span></div>
             </div>
-            <div class="about-right">
-                <p>Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                    voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                <a href="#" class="btn-outline">Read More →</a>
+            <div class="card large"><img src="Assets/img3.jpg" alt="">
+                <div class="overlay">LOREM IPSUM<br><span>Qui nunc nobis viden</span></div>
+            </div>
+            <div class="card c3"><img src="Assets/img2.jpg" alt="">
+                <div class="overlay">UT WISI ENI<br><span>Mirum est notare</span></div>
+            </div>
+            <div class="card c4"><img src="Assets/img4.jpg" alt="">
+                <div class="overlay">CLARITAS EST<br><span>Typi non habent clar</span></div>
+            </div>
+            <div class="card c5"><img src="Assets/img5.jpg" alt="">
+                <div class="overlay">VOTARE QUA<br><span>Weest etiamer</span></div>
             </div>
         </div>
+
     </section>
+    <!--User Welcome End-->
 
-    <!-- FaQ Section -->
-
-    <section class="faq-section">
-        <div class="faq-left">
-            <h2>
-                Eum ipsam laborum deleniti <strong>velit pariatur architecto aut nihil</strong>
-            </h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Duis aute irure dolor in reprehenderit</p>
-
-            <div class="accordion">
-                <div class="accordion-item active">
-                    <button class="accordion-button">
-                        <span>01</span> Non consectetur a erat nam at lectus urna duis?
-                        <i class="arrow">⌄</i>
-                    </button>
-                    <div class="accordion-content">
-                        Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non
-                        curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
-                    </div>
-                </div>
-
-                <div class="accordion-item">
-                    <button class="accordion-button">
-                        <span>02</span> Feugiat scelerisque varius morbi enim nunc faucibus a pellentesque?
-                        <i class="arrow">›</i>
-                    </button>
-                    <div class="accordion-content">
-                        Content for the second question goes here.
-                    </div>
-                </div>
-
-                <div class="accordion-item">
-                    <button class="accordion-button">
-                        <span>03</span> Dolor sit amet consectetur adipiscing elit pellentesque?
-                        <i class="arrow">›</i>
-                    </button>
-                    <div class="accordion-content">
-                        Content for the third question goes here.
-                    </div>
-                </div>
-            </div>
+    <!-- Testimonial Section Start -->
+    <div class="testimonial-section">
+        <div class="testimonial active">
+            <img src="Assets/t-img-1.jpg" class="testimonial-img">
+            <p>"Amazing service! Everything was perfect!"</p>
+            <strong>John & Mary</strong>
         </div>
-
-        <div class="faq-right">
-            <img src="Assets/Images/why-us.png" alt="FAQ Illustration" />
+        <div class="testimonial">
+            <img src="Assets/t-img-2.jpg" class="testimonial-img">
+            <p>"We loved every moment. Highly recommended!"</p>
+            <strong>Alice & Robert</strong>
         </div>
-    </section>
+        <div class="testimonial">
+            <img src="Assets/t-img-3.jpg" class="testimonial-img">
+            <p>"Beautiful decorations and smooth experience!"</p>
+            <strong>Emma & Lucas</strong>
+        </div>
+        <div class="testimonial-dots">
+            <span class="t-dot active"></span>
+            <span class="t-dot"></span>
+            <span class="t-dot"></span>
+        </div>
+    </div>
+    <!-- Testimonial Section End -->
 
+    <!-- Decoration Section Start -->
+     <h2>DECORATION IDEAS</h2>
+     <div class="decoration-section">
+        
+     </div>
+    <!-- Decoration Section End -->
 
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
+    <!-- Bootstrap JavaScript Link -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
