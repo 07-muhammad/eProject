@@ -10,18 +10,123 @@ body {
     color: #fff;
 }
 
+header {
+    background-color: #1f1f1f;
+    padding: 20px 40px;
+}
+
+.container-navbar {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    margin-bottom: 15px;
+    font-family: cursive;
+    font-size: 22px;
+    color: white;
+    max-height: 50px;
+    width: auto;
+    vertical-align: middle;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+}
+
+.nav {
+    display: flex;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav a {
+    position: relative;
+    text-decoration: none;
+    color: white;
+    padding-bottom: 5px;
+    transition: color 0.3s;
+}
+
+.nav a:hover {
+    color: #ffcc00;
+}
+
+.nav a.active {
+    color: #ffcc00;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100vh;
+        width: 50%;
+        background-color: #1f1f1f;
+        padding: 50px 20px;
+        transition: right 0.3s ease-in-out;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+    }
+
+    .nav.open {
+        right: 0;
+    }
+
+    .nav ul {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+}
+
+/* Cross button inside nav */
+.close-toggle {
+    display: none;
+    font-size: 30px;
+    color: white;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+
+/* Show cross only on small screens and when nav is open */
+@media (max-width: 768px) {
+    .nav.open .close-toggle {
+        display: block;
+    }
+}
+
 /* Page Header Section */
 .page-header {
-    background-color: #f9f9f9;
-    padding: 40px 20px;
+    background-color: #1f1f1f;
+    padding: 10px 5px;
     text-align: center;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid black;
 }
 
 .page-header h1 {
-    font-size: 32px;
+    font-size: 22px;
     margin-bottom: 10px;
-    color: #222;
+    color: white;
 }
 
 .breadcrumb {
@@ -40,11 +145,15 @@ body {
 
 .about-section {
     padding: 60px 20px;
-    background-color: #fff;
+    background-color: #746e6e;
     font-family: 'Segoe UI', sans-serif;
 }
 
 .container {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     max-width: 1200px;
     margin: auto;
 }
@@ -54,7 +163,10 @@ body {
     text-align: center;
     font-size: 28px;
     margin-bottom: 50px;
+    font-weight: 600;
     position: relative;
+    text-align: center;
+    margin: 0 auto 50px auto;
 }
 
 .section-title::before,
@@ -68,11 +180,46 @@ body {
     vertical-align: middle;
 }
 
+@media (max-width: 480px) {
+    .section-title {
+        font-size: 22px;
+    }
+
+    .about-text p,
+    .advantage-card p,
+    .mvv-card p {
+        font-size: 14px;
+    }
+
+    .about-text h3,
+    .advantage-card h3,
+    .mvv-card h3 {
+        font-size: 18px;
+    }
+}
+
 .about-content {
     display: flex;
+    justify-content: space-between;
     align-items: center;
     gap: 40px;
     flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-image img {
+        width: 100%;
+        height: auto;
+    }
+
+    .about-text {
+        text-align: center;
+    }
 }
 
 .about-image {
@@ -97,7 +244,7 @@ body {
 }
 
 .about-text p {
-    color: #666;
+    color: white;
     line-height: 1.7;
     margin-bottom: 15px;
     font-size: 15px;
@@ -125,23 +272,29 @@ body {
     color: white;
 }
 
-.overlay {
-    padding: 80px 20px;
+@media (max-width: 768px) {
+    .advantages-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .advantage-card {
+        width: 90%;
+        max-width: 300px;
+    }
 }
 
-.section-title {
-    color: #fff;
-    font-size: 32px;
-    margin-bottom: 50px;
-    text-align: center;
-    font-weight: 600;
+.overlay {
+    padding: 80px 20px;
 }
 
 .advantages-cards {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
     gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .advantage-card {
@@ -149,7 +302,7 @@ body {
     padding: 30px 20px;
     border-radius: 12px;
     text-align: center;
-    width: 260px;
+    width: calc(25% - 30px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
     transition: transform 0.3s ease;
 }
@@ -159,9 +312,10 @@ body {
 }
 
 .advantage-card img {
-    width: 60px;
-    height: 60px;
+    width: 160px;
+    height: 160px;
     margin-bottom: 20px;
+    border-radius: 20px 15px 45px;
 }
 
 .advantage-card h3 {
@@ -176,70 +330,82 @@ body {
 }
 
 .mvv-section {
-    padding: 60px 20px;
-    background: #fdfdfd;
-    text-align: center;
+    background: url('slider-3.jpg') no-repeat center center/cover;
+    position: relative;
+    color: #fff;
 }
 
-.mvv-section-heading {
-    font-size: 30px;
-    color: black;
-    margin-bottom: 40px;
-    position: relative;
+.mvv-section .overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 80px 20px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 50px;
     font-weight: 600;
 }
 
 .mvv-cards {
     display: flex;
-    justify-content: center;
-    gap: 30px;
     flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .mvv-card {
     background: #fff;
+    color: #333;
     border-radius: 12px;
     padding: 30px 20px;
-    max-width: 350px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    flex: 1 1 30%;
+    width: calc(25% - 30px);
     text-align: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
 }
 
 .mvv-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
 }
 
-.card-icon img {
-    width: 60px;
-    height: 60px;
+.mvv-card img {
+    width: 150px;
+    height: 150px;
+    border-radius: 20px 15px 45px;
     margin-bottom: 20px;
 }
 
 .mvv-card h3 {
-    font-size: 20px;
     color: #cba74f;
-    margin-bottom: 15px;
+    font-size: 20px;
+    margin-bottom: 10px;
 }
 
 .mvv-card p {
-    font-size: 15px;
-    color: #555;
+    font-size: 14px;
     line-height: 1.6;
+    color: #555;
 }
 
-@media (max-width: 768px) {
-    .mvc-cards {
-        flex-direction: column;
-        align-items: center;
-    }
+@media (max-width: 992px) {
 
+    .advantage-card,
     .mvv-card {
-        max-width: 100%;
+        width: calc(50% - 30px);
     }
 }
+
+@media (max-width: 600px) {
+
+    .advantage-card,
+    .mvv-card {
+        width: 100%;
+    }
+}
+
 
 /* What's New */
 .whatsnew-section {
@@ -247,6 +413,17 @@ body {
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
+}
+
+@media (max-width: 768px) {
+    .news-items {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .news {
+        width: 90%;
+    }
 }
 
 .news-items {
@@ -264,27 +441,38 @@ body {
     border-radius: 10px;
 }
 
-/* Footer */
+/* Unified Footer Styles for All Pages */
 .footer {
     background-color: #1e1e1e;
+    color: white;
     padding: 40px 20px;
 }
 
 .footer-content {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
-    gap: 20px;
+    align-items: flex-start;
+    flex-wrap: wrap;
     max-width: 1200px;
     margin: auto;
+    gap: 20px;
 }
 
 .footer-col {
-    flex: 1 1 250px;
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-col p {
+    font-size: 15px;
+    text-align: start;
+    margin-right: 20px;
 }
 
 .footer-col h4 {
-    margin-bottom: 15px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    text-align: left;
 }
 
 .footer-col ul {
@@ -292,52 +480,97 @@ body {
     padding: 0;
 }
 
-.footer-col ul li {
-    margin-bottom: 10px;
+.footer-col li {
+    margin: 5px 0;
 }
 
 .footer-col ul li a {
-    color: #ddd;
     text-decoration: none;
+    color: white;
 }
 
 .footer-col ul li a:hover {
-    text-decoration: underline;
+    transition: color 0.3s;
+    color: #ffcc00;
 }
 
-.subscribe-form {
+.footer-col .active {
+    color: #cba74f;
+}
+
+.subscribe {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.subscribe form {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 10px;
 }
 
-.subscribe-form input {
+.subscribe input {
+    font-size: 15.4px;
     padding: 10px;
-    flex: 1 1 60%;
+    width: 300px;
+    max-width: 100%;
     border: none;
-    border-radius: 5px;
+    border-radius: 50px;
+    height: 46px;
 }
 
-.subscribe-form button {
-    padding: 10px 20px;
-    background-color: #cba74f;
-    border: none;
-    color: #000;
-    border-radius: 5px;
+.subscribe button {
+    font-size: 15.4px;
+    padding: 10px;
+    background-color: transparent;
+    border: 1px solid #cba74f;
+    border-radius: 50px;
+    color: white;
     cursor: pointer;
+    width: 110.73px;
 }
 
-.logo h3 {
-    font-family: cursive;
-    font-size: 22px;
+.subscribe button:hover {
+    transition: all 0.3s;
+    background-color: #977317;
+    border-color: #977317;
 }
 
 .copyright {
     text-align: center;
-    margin-top: 30px;
-    font-size: 14px;
-    color: #aaa;
+    font-size: 12px;
+    margin-top: 20px;
 }
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;
+    }
+
+    .footer-col {
+        width: 100%;
+    }
+
+    .subscribe input {
+        width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    .subscribe form {
+        flex-direction: column;
+    }
+
+    .subscribe input,
+    .subscribe button {
+        width: 100%;
+    }
+}
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -345,8 +578,7 @@ body {
     .card-content,
     .advantage-items,
     .mvv-cards,
-    .news-items,
-    .footer-content {
+    .news-items {
         flex-direction: column;
         align-items: center;
     }
@@ -357,17 +589,8 @@ body {
 
     .item,
     .news,
-    .mvv-card,
-    .footer-col {
+    .mvv-card {
         width: 90%;
     }
 
-    .subscribe-form {
-        flex-direction: column;
-    }
-
-    .subscribe-form input,
-    .subscribe-form button {
-        width: 100%;
-    }
 }
