@@ -180,6 +180,11 @@ p {
     line-height: 1.5;
 }
 
+.welcome-section {
+    max-height: 150px;
+    background-color: #b0946c;
+}
+
 .welcome-gallery {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -227,6 +232,7 @@ p {
 }
 
 .testimonial-section {
+    margin-top: 100px;
     background: #f5f5f5;
     padding: 40px 20px;
     text-align: center;
@@ -269,6 +275,7 @@ p {
 }
 
 .section {
+    margin-top: 100px;
     margin-bottom: 40px;
 }
 
@@ -319,6 +326,7 @@ p {
     padding: 40px 20px;
     text-align: center;
     color: white;
+    margin-top: 80px;
 }
 
 .newsletter form {
@@ -359,6 +367,7 @@ p {
     padding: 60px 20px;
     text-align: center;
     background-color: #f9f9f9;
+    margin-top: 50px;
     /* optional for better visual separation */
 }
 
@@ -417,7 +426,7 @@ p {
     color: #fff;
 }
 
-/* Footer */
+/* Unified Footer Styles for All Pages */
 .footer {
     background-color: #1e1e1e;
     color: white;
@@ -446,6 +455,7 @@ p {
 
 .footer-col h4 {
     margin-bottom: 10px;
+    font-size: 24px;
 }
 
 .footer-col ul {
@@ -458,7 +468,6 @@ p {
 }
 
 .footer-col ul li a {
-    list-style: none;
     text-decoration: none;
     color: white;
 }
@@ -490,20 +499,24 @@ p {
 }
 
 .subscribe input {
+    font-size: 15.4px;
     padding: 10px;
     width: 300px;
     max-width: 100%;
     border: none;
     border-radius: 50px;
+    height: 46px;
 }
 
 .subscribe button {
+    font-size: 15.4px;
     padding: 10px;
     background-color: transparent;
     border: 1px solid #cba74f;
     border-radius: 50px;
     color: white;
     cursor: pointer;
+    width: 110.73px;
 }
 
 .subscribe button:hover {
@@ -518,42 +531,30 @@ p {
     margin-top: 20px;
 }
 
+/* Responsive Footer */
 @media (max-width: 768px) {
-    .events {
+    .footer-content {
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
+        gap: 30px;
     }
 
-    .event img {
-        width: 90%;
-        max-width: 300px;
+    .footer-col {
+        width: 100%;
     }
 
-    .newsletter input,
     .subscribe input {
         width: 80%;
     }
 }
 
 @media (max-width: 480px) {
-
-    .newsletter form,
     .subscribe form {
         flex-direction: column;
     }
 
-    .newsletter input,
-    .subscribe input {
-        width: 100%;
-    }
-
-    .newsletter button,
+    .subscribe input,
     .subscribe button {
         width: 100%;
-    }
-
-    .footer-content {
-        flex-direction: column;
-        align-items: flex-start;
     }
 }
