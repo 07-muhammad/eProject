@@ -180,9 +180,8 @@ p {
     line-height: 1.5;
 }
 
-.welcome-section {
-    max-height: 150px;
-    background-color: #b0946c;
+.welcome-section{
+    margin-top: 100px;
 }
 
 .welcome-gallery {
@@ -191,6 +190,7 @@ p {
     grid-template-rows: repeat(2, 200px);
     grid-gap: 10px;
     margin: 20px;
+    margin-top: 80px;
 }
 
 @media (max-width: 768px) {
