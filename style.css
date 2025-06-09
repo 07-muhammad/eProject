@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family: "Oswald";
+    font-family: "'Segoe UI', sans-serif";
 }
 
 header {
@@ -22,6 +22,7 @@ header {
 }
 
 .logo {
+    margin-top: 10px;
     margin-bottom: 15px;
     font-family: "Oswald";
     font-size: 24px;
@@ -120,39 +121,56 @@ header {
 
 .slides {
     display: flex;
+    animation: slideAnimation 9s infinite;
+    transition: transform 0.5s ease-in-out;
 }
 
 .slide {
-    min-width: 100%;
+    width: 100%;
     height: 400px;
     object-fit: cover;
-    display: none;
+    flex-shrink: 0;
+}
+
+@keyframes slideAnimation {
+    0% {
+        transform: translateX(0%);
+    }
+
+    15% {
+        transform: translateX(-100%);
+    }
+
+    /* Slide to 2nd */
+    33.33% {
+        transform: translateX(-100%);
+    }
+
+    /* Hold */
+    48% {
+        transform: translateX(-200%);
+    }
+
+    /* Slide to 3rd */
+    66.66% {
+        transform: translateX(-200%);
+    }
+
+    /* Hold */
+    81% {
+        transform: translateX(0%);
+    }
+
+    /* Slide to 1st */
+    100% {
+        transform: translateX(0%);
+    }
+
+    /* Hold */
 }
 
 .slide.active {
     display: block;
-}
-
-.dots {
-    text-align: center;
-    position: absolute;
-    bottom: 10px;
-    width: 100%;
-}
-
-.dot {
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    background: white;
-    border-radius: 50%;
-    margin: 5px;
-    opacity: 0.5;
-    cursor: pointer;
-}
-
-.dot.active {
-    opacity: 1;
 }
 
 h2 {
@@ -180,7 +198,7 @@ p {
     line-height: 1.5;
 }
 
-.welcome-section{
+.welcome-section {
     margin-top: 100px;
 }
 
@@ -222,7 +240,6 @@ p {
     bottom: 10px;
     left: 10px;
     color: white;
-    font-weight: bold;
     font-size: 16px;
 }
 
@@ -397,7 +414,6 @@ p {
 }
 
 .event h4 {
-    font-weight: bold;
     margin: 10px 0 5px;
     color: #222;
 }
@@ -413,7 +429,6 @@ p {
     border: 2px solid #cba74f;
     background: none;
     color: #cba74f;
-    font-weight: bold;
     font-size: 14px;
     cursor: pointer;
     border-radius: 4px;
@@ -482,6 +497,7 @@ p {
 }
 
 .logo {
+    margin-bottom: 20px;
     font-family: cursive;
     font-size: 22px;
 }
@@ -510,19 +526,23 @@ p {
 
 .subscribe button {
     font-size: 15.4px;
-    padding: 10px;
+    padding: 10px 20px;
     background-color: transparent;
     border: 1px solid #cba74f;
     border-radius: 50px;
     color: white;
     cursor: pointer;
-    width: 110.73px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    height: 46px;
+    transition: all 0.3s ease;
 }
 
 .subscribe button:hover {
-    transition: all 0.3s;
     background-color: #977317;
     border-color: #977317;
+    color: white;
 }
 
 .copyright {
