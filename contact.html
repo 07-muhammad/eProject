@@ -1,136 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Contact</title>
-        <link rel="icon" href="Web Logo.webp">
-        <link rel="stylesheet" href="contact.css">
-        <link rel="stylesheet"
-            href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap">
-    </head>
-    <body>
 
-        <!-- Header Section Start-->
-        <header>
-            <div class="container">
-                <div class="logo">
-                    Wedding Salon
-                </div>
-                <div class="menu-toggle" id="menu-toggle">
-                    &#9776;
-                </div>
-                <nav class="nav" id="nav">
-                    <div class="close-toggle" id="close-toggle">
-                        &times;
-                    </div>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="#">We Provide</a></li>
-                        <li><a href="contact.html"
-                                class="active">Contact</a></li>
-                    </ul>
-                </nav>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="icon" href="Web Logo.webp">
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+</head>
+
+<body>
+
+    <!-- Header Section Start-->
+    <header>
+        <div class="container">
+            <div class="logo">
+                Elegant & Classy
             </div>
-        </header>
-        <!-- Header Section End -->
-
-        <!-- Geo Location Area -->
-        <section>
-
-        </section>
-
-        <!-- Remaining Contact Section -->
-        <section class="contact-page">
-            <div class="contact-wrapper">
-                <div class="contact-info">
-                    <h2><span>—</span> CONTACT INFO <span>—</span></h2>
-                    <p>
-                        Sed ut perspiciatis unde omnis iste natus error sit
-                        voluptatem accusantium doloremque
-                        laudantium, totam rem aperiam, eaque ipsa quae ab illo
-                        inventore veritatis et quasi
-                        architecto beatae vitae dicta sunt explicabo. Nemo enim
-                        ipsam voluptatem quia.
-                    </p>
-                    <p class="bold">
-                        Sed ut perspiciatis unde omnis iste natus error sit
-                        voluptatem accusantium doloremque
-                        laudantium, totam rem aperiam.
-                    </p>
-                    <address>
-                        <strong>The Company Name Inc.</strong><br>
-                        9870 St Vincent Place,<br>
-                        Glasgow, DC 45 Fr 45.<br><br>
-                        Telephone: +1 800 603 6035<br>
-                        Fax: +1 800 889 9898<br>
-                        E-mail: <a
-                            href="index.html">weddingsalon123@gmail.com</a>
-                    </address>
-                </div>
-
-                <div class="contact-form">
-                    <h2><span>—</span> CONTACT FORM <span>—</span></h2>
-                    <form>
-                        <div class="form-row">
-                            <input type="text" placeholder="Name" required>
-                            <input type="email" placeholder="E-mail" required>
-                            <input type="number" placeholder="Phone">
-                        </div>
-                        <textarea placeholder="Message" rows="6"
-                            required></textarea>
-                        <button type="submit">SEND</button>
-                    </form>
-                </div>
+            <div class="menu-toggle" id="menu-toggle">
+                &#9776;
             </div>
-        </section>
+            <nav class="nav" id="nav">
+                <div class="close-toggle" id="close-toggle">
+                    &times;
+                </div>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="#">We Provide</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- Header Section End -->
 
-        <!-- Footer Section Start -->
-        <footer class="footer">
-            <div class="footer-content">
-                <div class="footer-col">
-                    <h3 class="logo"><img src="website logo" alt></h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Ipsum aut ad, animi natus ex optio id fugit veniam
-                        soluta impedit aperiam nihil suscipit perferendis eaque
-                        rerum voluptatibus harum, dignissimos reprehenderit!</p>
-                </div>
-                <div class="footer-col">
-                    <h4>MENU</h4>
-                    <ul>
-                        <li><span class="active"><a
-                                    href="index.html">Home</a></span></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="#">Product</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>SERVICES</h4>
-                    <ul>
-                        <li><a href>Eum Iriure</a></li>
-                        <li><a href>Option Congu</a></li>
-                        <li><a href>Augue Duis</a></li>
-                        <li><a href>Facilisis At</a></li>
-                        <li><a href>Nobis Eleifend</a></li>
-                    </ul>
-                </div>
+    <!-- Geo Location Area -->
+    <section id="map" style="height: 200px;">
+
+    </section>
+
+    <!-- Remaining Contact Section -->
+    <section class="contact-page">
+        <div class="contact-wrapper">
+            <div class="contact-info">
+                <h2><span>—</span> CONTACT INFO <span>—</span></h2>
+                <p>
+                    Sed ut perspiciatis unde omnis iste natus error sit
+                    voluptatem accusantium doloremque
+                    laudantium, totam rem aperiam, eaque ipsa quae ab illo
+                    inventore veritatis et quasi
+                    architecto beatae vitae dicta sunt explicabo. Nemo enim
+                    ipsam voluptatem quia.
+                </p>
+                <p class="bold">
+                    Sed ut perspiciatis unde omnis iste natus error sit
+                    voluptatem accusantium doloremque
+                    laudantium, totam rem aperiam.
+                </p>
+                <address>
+                    <strong>The Company Name Inc.</strong><br>
+                    9870 St Vincent Place,<br>
+                    Glasgow, DC 45 Fr 45.<br><br>
+                    Telephone: +1 800 603 6035<br>
+                    Fax: +1 800 889 9898<br>
+                    E-mail: <a href="index.html">weddingsalon123@gmail.com</a>
+                </address>
             </div>
-            <div class="subscribe">
+
+            <div class="contact-form">
+                <h2><span>—</span> CONTACT FORM <span>—</span></h2>
                 <form>
-                    <input type="email" placeholder="E-Mail">
-                    <button type="submit">➤ Subscribe</button>
+                    <div class="form-row">
+                        <input type="text" placeholder="Name" required>
+                        <input type="email" placeholder="E-mail" required>
+                        <input type="number" placeholder="Phone">
+                    </div>
+                    <textarea placeholder="Message" rows="6" required></textarea>
+                    <button type="submit">SEND</button>
                 </form>
             </div>
-            <p class="copyright">
-                © 2019 Wedding Theme design by Zemez
-            </p>
-        </footer>
-        <!-- Footer Section End -->
+        </div>
+    </section>
 
-        <script src="contact.js"></script>
-    </body>
+    <!-- Footer Section Start -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-col">
+                <h3 class="footer-logo">Elegant & Classy</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Ipsum aut ad, animi natus ex optio id fugit veniam
+                    soluta impedit aperiam nihil suscipit perferendis eaque
+                    rerum voluptatibus harum, dignissimos reprehenderit!</p>
+            </div>
+            <div class="footer-col">
+                <h4>MENU</h4>
+                <ul>
+                    <li><span class="active"><a href="index.html">Home</a></span></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="#">Product</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>SERVICES</h4>
+                <ul>
+                    <li><a href>Eum Iriure</a></li>
+                    <li><a href>Option Congu</a></li>
+                    <li><a href>Augue Duis</a></li>
+                    <li><a href>Facilisis At</a></li>
+                    <li><a href>Nobis Eleifend</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="subscribe">
+            <form>
+                <input type="email" placeholder="E-Mail">
+                <button type="submit">➤ Subscribe</button>
+            </form>
+        </div>
+        <p class="copyright">
+            © 2019 Wedding Theme design by Zemez
+        </p>
+    </footer>
+    <!-- Footer Section End -->
+
+    <script src="contact.js"></script>
+</body>
+
 </html>
