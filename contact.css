@@ -12,6 +12,7 @@ body {
 header {
     background-color: #1f1f1f;
     padding: 20px 40px;
+    height: 120px;
 }
 
 .container {
@@ -23,8 +24,7 @@ header {
 }
 
 .logo {
-    margin-top: 10px;
-    margin-bottom: 15px;
+    margin-top: 20px;
     font-family: cursive;
     font-size: 24px;
     color: white;
@@ -45,6 +45,7 @@ header {
     list-style: none;
     display: flex;
     gap: 30px;
+    margin-top: 14px;
 }
 
 .nav a {
@@ -275,6 +276,12 @@ button:hover {
 .footer-col ul li a {
     text-decoration: none;
     color: white;
+}
+
+.footer-logo {
+    margin-bottom: 20px;
+    font-family: cursive;
+    font-size: 22px;
 }
 
 .footer-col ul li a:hover {
