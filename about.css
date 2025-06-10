@@ -13,6 +13,7 @@ body {
 header {
     background-color: #1f1f1f;
     padding: 20px 40px;
+    height: 120px;
 }
 
 .container-navbar {
@@ -24,7 +25,7 @@ header {
 }
 
 .logo {
-    margin-bottom: 15px;
+    margin-top: 20px;
     font-family: cursive;
     font-size: 22px;
     color: white;
@@ -48,6 +49,7 @@ header {
     list-style: none;
     display: flex;
     gap: 30px;
+    margin-top: 20px;
 }
 
 .nav a {
@@ -290,19 +292,19 @@ header {
     transition: transform 0.3s ease;
 }
 
-.c1{
-    background: linear-gradient(#7c312a,#c79456,#af7762 );
+.c1 {
+    background: linear-gradient(#7c312a, #c79456, #af7762);
 }
 
-.c2{
+.c2 {
     background: linear-gradient(#deccb4, #a5654d, #4a3725);
 }
 
-.c3{
-    background: linear-gradient(#dbb998, #a54b4d, #917365 );
+.c3 {
+    background: linear-gradient(#dbb998, #a54b4d, #917365);
 }
 
-.c4{
+.c4 {
     background: linear-gradient(#88847b, #c97e87, #746f6b);
 }
 
@@ -367,15 +369,15 @@ header {
     transition: transform 0.3s ease;
 }
 
-.mc1{
+.mc1 {
     background: linear-gradient(#c997b4, #f3d3e0, #344816);
 }
 
-.mc2{
+.mc2 {
     background: linear-gradient(#c79f61, #fde2c5, #4a3018);
 }
 
-.mc3{
+.mc3 {
     background: linear-gradient(#d4c9f4, #bcd4eb, #ff9c01);
 }
 
@@ -517,6 +519,12 @@ header {
 .footer-col ul li a {
     text-decoration: none;
     color: white;
+}
+
+.footer-logo {
+    margin-bottom: 20px;
+    font-family: cursive;
+    font-size: 22px;
 }
 
 .footer-col ul li a:hover {
