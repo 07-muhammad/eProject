@@ -428,6 +428,17 @@ header {
     min-width: 200px;
 }
 
+.footer-logo {
+    margin-bottom: 20px;
+    font-family: cursive;
+    font-size: 22px;
+    color: white;
+    max-height: 50px;
+    width: auto;
+    vertical-align: middle;
+}
+
+
 .footer-col p {
     font-size: 15px;
     text-align: start;
@@ -462,7 +473,7 @@ header {
     color: #cba74f;
 }
 
-.footer-logo {
+.logo {
     margin-bottom: 20px;
     font-family: cursive;
     font-size: 22px;
