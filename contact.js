@@ -17,3 +17,16 @@ closeToggle.addEventListener("click", () => {
     nav.classList.remove("open");
 });
 
+// Map
+
+navigator.geolocation.getCurrentPosition((res) => {
+    // console.log(res.coords.latitude);
+    // console.log(res.coords.longitude);
+    
+    var map = L.map('map').setView([res.coords.latitude, res.coords.longitude], 16);
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    }).addTo(map);
+
+});
