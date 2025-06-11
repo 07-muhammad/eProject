@@ -11,9 +11,10 @@ body {
 header {
     background-color: #1f1f1f;
     padding: 20px 40px;
+    height: 120px;
 }
 
-.container {
+.container-navbar {
     max-width: 1200px;
     margin: auto;
     display: flex;
@@ -22,9 +23,13 @@ header {
 }
 
 .logo {
+    margin-top: 6px;
     font-family: cursive;
-    font-size: 24px;
+    font-size: 22px;
     color: white;
+    max-height: 50px;
+    width: auto;
+    vertical-align: middle;
 }
 
 .menu-toggle {
@@ -42,7 +47,7 @@ header {
     list-style: none;
     display: flex;
     gap: 30px;
-    margin-top: 20px;
+    margin-top: 24px;
 }
 
 .nav a {
@@ -109,6 +114,7 @@ header {
         display: block;
     }
 }
+
 
 
 .slider {
@@ -254,6 +260,10 @@ p {
     text-align: center;
 }
 
+.testimonial-section h2{
+    margin-bottom: 25px;
+}
+
 .testimonial {
     display: none;
 }
@@ -293,6 +303,10 @@ p {
 .section {
     margin-top: 100px;
     margin-bottom: 40px;
+}
+
+.section h2{
+    margin-bottom: 25px;
 }
 
 /* Carousel container */
@@ -465,6 +479,7 @@ p {
     font-size: 15px;
     text-align: start;
     margin-right: 20px;
+    margin-top: 20px;
 }
 
 .footer-col h4 {
@@ -499,7 +514,12 @@ p {
     margin-bottom: 20px;
     font-family: cursive;
     font-size: 22px;
+    color: white;
+    max-height: 50px;
+    width: auto;
+    vertical-align: middle;
 }
+
 
 .subscribe {
     text-align: center;
