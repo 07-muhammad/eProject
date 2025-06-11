@@ -231,6 +231,24 @@ button:hover {
     }
 }
 
+#map {
+    height: 50vh;
+    /* Responsive height: 50% of the viewport height */
+    width: 100%;
+    /* Full width */
+    padding: 0;
+    margin: 0;
+    z-index: 0;
+}
+
+/* Optional: Improve responsiveness on very small screens */
+@media (max-width: 600px) {
+    #map {
+        height: 300px;
+        /* Fixed height fallback for very small screens */
+    }
+}
+
 .footer {
     background-color: #1e1e1e;
     color: white;
